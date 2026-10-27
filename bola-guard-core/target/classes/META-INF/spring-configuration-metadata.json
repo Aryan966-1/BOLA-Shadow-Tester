@@ -1,0 +1,77 @@
+{
+  "groups": [
+    {
+      "name": "bola-guard",
+      "type": "com.bolaguard.core.configuration.BolaGuardProperties",
+      "sourceType": "com.bolaguard.core.configuration.BolaGuardProperties"
+    },
+    {
+      "name": "bola-guard.ci",
+      "type": "com.bolaguard.core.configuration.BolaGuardProperties$Ci",
+      "sourceType": "com.bolaguard.core.configuration.BolaGuardProperties",
+      "sourceMethod": "public com.bolaguard.core.configuration.BolaGuardProperties.Ci getCi() "
+    },
+    {
+      "name": "bola-guard.discovery",
+      "type": "com.bolaguard.core.configuration.BolaGuardProperties$Discovery",
+      "sourceType": "com.bolaguard.core.configuration.BolaGuardProperties",
+      "sourceMethod": "public com.bolaguard.core.configuration.BolaGuardProperties.Discovery getDiscovery() "
+    },
+    {
+      "name": "bola-guard.reporting",
+      "type": "com.bolaguard.core.configuration.BolaGuardProperties$Reporting",
+      "sourceType": "com.bolaguard.core.configuration.BolaGuardProperties",
+      "sourceMethod": "public com.bolaguard.core.configuration.BolaGuardProperties.Reporting getReporting() "
+    },
+    {
+      "name": "bola-guard.runtime",
+      "type": "com.bolaguard.core.configuration.BolaGuardProperties$Runtime",
+      "sourceType": "com.bolaguard.core.configuration.BolaGuardProperties",
+      "sourceMethod": "public com.bolaguard.core.configuration.BolaGuardProperties.Runtime getRuntime() "
+    },
+    {
+      "name": "bola-guard.testing",
+      "type": "com.bolaguard.core.configuration.BolaGuardProperties$Testing",
+      "sourceType": "com.bolaguard.core.configuration.BolaGuardProperties",
+      "sourceMethod": "public com.bolaguard.core.configuration.BolaGuardProperties.Testing getTesting() "
+    }
+  ],
+  "properties": [
+    {
+      "name": "bola-guard.ci.fail-on-bola",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.bolaguard.core.configuration.BolaGuardProperties$Ci"
+    },
+    {
+      "name": "bola-guard.discovery.enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.bolaguard.core.configuration.BolaGuardProperties$Discovery"
+    },
+    {
+      "name": "bola-guard.enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.bolaguard.core.configuration.BolaGuardProperties"
+    },
+    {
+      "name": "bola-guard.reporting.enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.bolaguard.core.configuration.BolaGuardProperties$Reporting"
+    },
+    {
+      "name": "bola-guard.runtime.enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.bolaguard.core.configuration.BolaGuardProperties$Runtime"
+    },
+    {
+      "name": "bola-guard.runtime.fail-on-missing-authorization",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.bolaguard.core.configuration.BolaGuardProperties$Runtime"
+    },
+    {
+      "name": "bola-guard.testing.enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.bolaguard.core.configuration.BolaGuardProperties$Testing"
+    }
+  ],
+  "hints": []
+}

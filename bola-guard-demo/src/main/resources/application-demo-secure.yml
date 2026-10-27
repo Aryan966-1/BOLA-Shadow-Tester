@@ -1,0 +1,7 @@
+spring:
+  config:
+    activate:
+      on-profile: demo-secure
+
+bola-guard:
+  enabled: true
