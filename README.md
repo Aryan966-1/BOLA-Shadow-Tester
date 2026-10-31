@@ -105,10 +105,23 @@ Run tests in Vulnerable mode (Expect FAIL):
 mvn test -Dspring.profiles.active=demo-vulnerable
 ```
 
-## 14. Swagger
+## 14. Swagger Demo Walkthrough
 Swagger UI is accessible at:
 `http://localhost:8080/swagger-ui/index.html`
-*Use `/api/auth/login` to get a JWT, then use the "Authorize" button.*
+
+The API documentation is grouped into **Authentication** and **File operations**. Follow this workflow:
+
+1. Start the app in either `demo-secure` or `demo-vulnerable` mode.
+2. Open **Authentication → POST /api/auth/login**.
+3. Enter one seeded username: `alice`, `bob`, `charlie`, or `admin`. This local teaching shortcut does not check a password.
+4. Copy the returned `token`, click **Authorize**, and paste the token only. Swagger supplies the `Bearer` prefix.
+5. Open **File operations → GET /api/files/{fileId}**, enter `101`, and execute.
+6. Log in as another user, authorize with that user's token, and repeat the same request.
+
+File 101 belongs to Alice. Bob has VIEWER access. Charlie has no share. In secure mode, Alice and Bob should be able to read it while Charlie should receive 403. In vulnerable mode, Charlie can read it; that unexpected 200 demonstrates BOLA.
+
+The demo login is intentionally simplified for local testing. Do not expose it to an untrusted network or use real data.
+
 
 ## 15. CI/CD
 A GitHub Actions workflow is provided in `.github/workflows/bola-guard.yml`. It runs tests in both profiles to ensure the framework catches regressions. If BOLA is detected, the build fails.
