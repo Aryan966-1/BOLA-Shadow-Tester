@@ -1,7 +1,0 @@
-spring:
-  config:
-    activate:
-      on-profile: demo-vulnerable
-
-bola-guard:
-  enabled: true
