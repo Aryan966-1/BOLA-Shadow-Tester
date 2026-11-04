@@ -11,8 +11,8 @@
 
     <artifactId>bola-guard-demo</artifactId>
 
-    <name>BOLA-Guard Demo Application</name>
-    <description>Demo application to test BOLA-Guard framework</description>
+    <name>BOLA Shadow Tester Demo Application</name>
+    <description>Demo application to test BOLA Shadow Tester framework</description>
 
     <dependencies>
         <dependency>

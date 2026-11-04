@@ -12,7 +12,7 @@ public class ReportGenerator {
     public void generateReport(String appName, List<CoverageResult> coverageResults, List<TestResult> testResults) {
         StringBuilder sb = new StringBuilder();
         sb.append("\n========================================================\n");
-        sb.append("                 BOLA-GUARD REPORT\n");
+        sb.append("              BOLA SHADOW TESTER REPORT\n");
         sb.append("========================================================\n\n");
         sb.append("Application: ").append(appName).append("\n\n");
 
