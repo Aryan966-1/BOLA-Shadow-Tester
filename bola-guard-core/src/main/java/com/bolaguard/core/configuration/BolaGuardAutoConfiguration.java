@@ -6,6 +6,6 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @ComponentScan(basePackages = "com.bolaguard.core")
-@ConditionalOnProperty(prefix = "bola-guard", name = "enabled", havingValue = "true", matchIfMissing = true)
+@ConditionalOnProperty(prefix = "bola-shadow-tester", name = "enabled", havingValue = "true", matchIfMissing = true)
 public class BolaGuardAutoConfiguration {
 }

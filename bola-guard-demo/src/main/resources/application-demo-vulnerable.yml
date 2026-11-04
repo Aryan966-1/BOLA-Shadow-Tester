@@ -3,5 +3,5 @@ spring:
     activate:
       on-profile: demo-vulnerable
 
-bola-guard:
+bola-shadow-tester:
   enabled: true

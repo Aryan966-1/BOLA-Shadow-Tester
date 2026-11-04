@@ -40,7 +40,7 @@ public class BolaGuardVulnerableIntegrationTest {
 
     private static PostgreSQLContainer<?> createContainer() {
         PostgreSQLContainer<?> container = new PostgreSQLContainer<>("postgres:15-alpine");
-        container.withDatabaseName("bola_guard_vuln_test");
+        container.withDatabaseName("bola_shadow_tester_vuln_test");
         container.withUsername("bola");
         container.withPassword("bola");
         return container;
@@ -78,7 +78,7 @@ public class BolaGuardVulnerableIntegrationTest {
 
     @Test
     public void executeBolaGuardTests_detectsBOLAInVulnerableProfile() {
-        System.out.println("Starting BOLA-Guard Execution on Vulnerable Profile...");
+        System.out.println("Starting BOLA Shadow Tester Execution on Vulnerable Profile...");
 
         List<DiscoveredEndpoint> endpoints = discoveryService.discoverEndpoints();
         List<CoverageResult> coverageResults = coverageAnalyzer.analyzeCoverage(endpoints);
@@ -96,6 +96,6 @@ public class BolaGuardVulnerableIntegrationTest {
 
         ReportGenerator reportGenerator = new ReportGenerator();
         assertThrows(BolaVulnerabilityDetectedException.class, () ->
-                reportGenerator.generateReport("bola-guard-demo-vulnerable", coverageResults, testResults));
+                reportGenerator.generateReport("bola-shadow-tester-demo-vulnerable", coverageResults, testResults));
     }
 }

@@ -5,7 +5,7 @@ services:
     environment:
       POSTGRES_USER: bola
       POSTGRES_PASSWORD: bola
-      POSTGRES_DB: bola_guard
+      POSTGRES_DB: bola_shadow_tester
     ports:
       - "5433:5432"
     volumes:

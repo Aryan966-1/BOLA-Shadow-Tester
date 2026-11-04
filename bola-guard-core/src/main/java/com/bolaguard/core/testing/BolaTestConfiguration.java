@@ -4,7 +4,7 @@ import java.util.Map;
 
 /**
  * Interface that the target application implements to provide test data 
- * to the BOLA-Guard framework.
+ * to the BOLA Shadow Tester framework.
  */
 public interface BolaTestConfiguration {
     /**

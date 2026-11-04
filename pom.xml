@@ -9,8 +9,8 @@
     <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
-    <name>BOLA-Guard Parent</name>
-    <description>Automated Runtime Enforcement and Regression Testing Framework for REST APIs</description>
+    <name>BOLA Shadow Tester Parent</name>
+    <description>Automated BOLA Shadow Testing and Regression Framework for REST APIs</description>
 
     <modules>
         <module>bola-guard-core</module>

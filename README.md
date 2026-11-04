@@ -1,13 +1,13 @@
-# BOLA-Guard
+# BOLA Shadow Tester
 
 ## 1. Project Overview
-BOLA-Guard is an automated runtime enforcement and regression testing framework for REST APIs built on Spring Boot. It discovers object-centric endpoints, analyzes object-level authorization coverage, and generates cross-user security tests to detect Broken Object Level Authorization (BOLA) vulnerabilities.
+BOLA Shadow Tester is an automated runtime enforcement and regression testing framework for REST APIs built on Spring Boot. It discovers object-centric endpoints, analyzes object-level authorization coverage, and generates cross-user security tests to detect Broken Object Level Authorization (BOLA) vulnerabilities.
 
 ## 2. BOLA Explanation
 Broken Object Level Authorization (BOLA), also known as IDOR, occurs when an application fails to properly verify if an authenticated user is authorized to access a specific data object requested via an identifier (e.g., `GET /api/files/101`). An attacker can exploit this by simply changing the identifier to access another user's private data.
 
 ## 3. Architecture
-BOLA-Guard uses a dual-module architecture separating the security testing framework from the target application.
+BOLA Shadow Tester uses a dual-module architecture separating the security testing framework from the target application.
 
 ```text
                 ┌───────────────────────┐
@@ -20,7 +20,7 @@ BOLA-Guard uses a dual-module architecture separating the security testing frame
                            │
                            ▼
                 ┌───────────────────────┐
-                │      BOLA-Guard       │
+                │  BOLA Shadow Tester   │
                 │                       │
                 │ Endpoint Discovery    │
                 │ Coverage Analysis     │
@@ -72,7 +72,7 @@ mvn clean install
 
 ## 9. PostgreSQL Setup
 The application requires PostgreSQL.
-Connection details are in `application.yml` (default: jdbc:postgresql://localhost:5432/bola_guard, bola/bola).
+Connection details are in `application.yml` (default: jdbc:postgresql://localhost:5433/bola_shadow_tester, bola/bola).
 
 ## 10. Docker Setup
 You can start the required database via Docker Compose:
@@ -132,7 +132,7 @@ In vulnerable mode:
 2. `GET /api/files/101` (Alice's file)
 3. Result: `200 OK`. Charlie successfully accessed Alice's data.
 
-## 17. Example BOLA-Guard Detection
+## 17. Example BOLA Shadow Tester Detection
 ```text
 BOLA DETECTED: Endpoint /api/files/{fileId} on resource 101 accessed by UNAUTHORIZED. Expected 403, Actual 200. Unauthorized user can access another user's object.
 BUILD STATUS: FAIL

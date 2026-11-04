@@ -11,8 +11,8 @@
 
     <artifactId>bola-guard-core</artifactId>
 
-    <name>BOLA-Guard Core Framework</name>
-    <description>Core framework for discovering endpoints and executing BOLA tests</description>
+    <name>BOLA Shadow Tester Core Framework</name>
+    <description>Core framework for discovering endpoints and executing BOLA shadow tests</description>
 
     <dependencies>
         <!-- Spring Boot dependencies for the framework -->
